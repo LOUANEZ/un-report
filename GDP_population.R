@@ -33,6 +33,8 @@ ggplot(data=gapminder_1997) +
   geom_point() +
   scale_color_brewer(palette = "Spectral")
 
+ggsave("figure/gdpPercap_lifeExp.png")
+
 #Encode each continent as different shapes
 #instead of colors
 ggplot(data=gapminder_1997) + aes(x = gdpPercap) + labs(x = "GDP Per Capital") +
@@ -41,5 +43,3 @@ ggplot(data=gapminder_1997) + aes(x = gdpPercap) + labs(x = "GDP Per Capital") +
   labs(title = "Do people in wealthy countries live longer?")+
   aes(shape = continent)
 
-?scale_color_brewer
-??scale_color_shape
